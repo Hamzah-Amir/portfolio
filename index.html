@@ -4,9 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hamza Amir - Software Developer Portfolio">
+    <meta name="keywords" content="software developer, web developer, portfolio, Hamza Amir">
     <title>Portfolio - Hamza Amir</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="assets/favicon.png" type="image/png">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
@@ -16,72 +20,114 @@
         </div>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="/projects.html">Projects</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="/assets/CV.docx" download="Resume">Resume</a></li>
-                
             </ul>
         </nav>
-        <div class="search-bar">
-            <input type="text" placeholder="Search...">
-            <button>Search</button>
-        </div>
-
     </header>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h2>Hello, I'm <br><span>Hamza Amir</span></h2>
-            <h3>A Software Developer</h3>
-            <h4><p>Lorem ipsum text for placeholder content.</p></h4>
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h2>Hello, I'm <br><span>Hamza Amir</span></h2>
+                <h3>A Software Developer</h3>
+                <h4>
+                    <p>Passionate about creating innovative solutions and delivering exceptional user experiences through clean, efficient code.</p>
+                </h4>
 
-            <button class="cta">Let's Talk</button>
+                <button class="cta" onclick="scrollToContact()">Let's Talk</button>
 
-            <div class="social-icons">
-                <b>
-                    <h4>Check Out My</h4>
-                </b>
-                <div class="social-links">
-                    <a href="https://www.instagram.com/" target="_blank">
-                        <img src="assets/instagram.png" alt="Instagram" width="50" height="50">
-                    </a>
-                    <a href="https://www.github.com" target="_blank">
-                        <img src="assets/github.png" width="50" height="50" alt="Github">
-                    </a>
+                <div class="social-icons">
+                    <h4>Connect With Me</h4>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
+            <div class="profile-img">
+                <img src="assets/My Image.png" alt="Hamza Amir - Software Developer" loading="lazy">
+            </div>
+        </section>
 
-        </div>
-        <div class="profile-img">
-            <div class="image-placeholder">
-                <img src="assets/My Image.png" alt="Profile Picture">
+        <section id="services">
+            <h3>My Expertise</h3>
+            <h1>What I Do</h1>
+            <div class="services-container">
+                <div class="service">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>UI/UX Design</h3>
+                    <p>Creating intuitive and engaging user interfaces with a focus on user experience and modern design principles.</p>
+                </div>
+                <div class="service">
+                    <i class="fas fa-palette"></i>
+                    <h3>Graphic Design</h3>
+                    <p>Developing compelling visual content that communicates your brand message effectively.</p>
+                </div>
+                <div class="service">
+                    <i class="fas fa-code"></i>
+                    <h3>Web Development</h3>
+                    <p>Building responsive and performant web applications using the latest technologies and best practices.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h1>Featured Projects</h1>
+            <div class="projects-container">
+                <article class="project">
+                    <img src="assets/project1.jpg" alt="Project 1" loading="lazy">
+                    <h2>E-commerce Platform</h2>
+                    <p>A full-stack e-commerce solution with modern features and responsive design.</p>
+                    <a href="#" class="btn">View Project</a>
+                </article>
+                <article class="project">
+                    <img src="assets/project2.jpg" alt="Project 2" loading="lazy">
+                    <h2>Task Management App</h2>
+                    <p>A collaborative task management application with real-time updates.</p>
+                    <a href="#" class="btn">View Project</a>
+                </article>
+                <article class="project">
+                    <img src="assets/project3.jpg" alt="Project 3" loading="lazy">
+                    <h2>Portfolio Website</h2>
+                    <p>A modern portfolio website showcasing creative work and skills.</p>
+                    <a href="#" class="btn">View Project</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Hamza Amir. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
             </div>
         </div>
+    </footer>
 
-    </section>
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            header.classList.toggle('scrolled', window.scrollY > 0);
+        });
 
-    <section id="services">
-        <h3>My Services</h3>
-        <h1>What I Do</h1>
-        <div class="services-container">
-            <div class="service">
-                <img src="assets/uiux.png" alt="UI/UX Design">
-                <h3>UI/UX Designer</h3>
-                <p>Placeholder text for UI/UX Designer.</p>
-            </div>
-            <div class="service">
-                <img src="assets/graphic.png" alt="Graphic Design">
-                <h3>Graphic Designer</h3>
-                <p>Placeholder text for Graphic Designer.</p>
-            </div>
-            <div class="service">
-                <img src="assets/web.png" alt="Web Design">
-                <h3>Web Designer</h3>
-                <p>Placeholder text for Web Designer.</p>
-            </div>
-        </div>
-
-    </section>
+        // Add loading animation
+        document.addEventListener('DOMContentLoaded', () => {
+            document.body.classList.add('loaded');
+        });
+    </script>
 </body>
 
 </html>

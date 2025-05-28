@@ -3,41 +3,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hamza Amir - Software Developer Projects Portfolio">
+    <meta name="keywords" content="software developer, web developer, projects, portfolio, Hamza Amir">
     <title>Hamza Amir - Projects</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/favicon.png" type="image/png">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
-        <div class="logo"> <a href="/index.html">Portfolio</a></div>
-        
+        <div class="logo">
+            <a href="index.html">Portfolio</a>
+        </div>
         <nav>
-
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="/projects.html">Projects</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="/assets/CV.docx" download="Resume">Resume</a></li>
-                
             </ul>
         </nav>
-        <div class="search-bar">
-            <input type="text" placeholder="Search...">
-            <button>Search</button>
-        </div>
-        
     </header>
-    
-    <div class="projects-heading">
-        <h1><b>My <span>Projects</span></b></h1>
-    </div>
-    <div class="projects-container">
-        <div class="projects">
-            <img src="/assets/babar.jpeg" width="50" height="50" alt="">
-            <h2>title of project</h2>
-            <p>description</p>
-            <a href="project_web_link"></a>
-            <a href="project_github link"></a>
-        </div>
-    </div>
 
+    <main>
+        <section id="projects" class="projects-section">
+            <div class="section-header">
+                <h1>Featured <span>Projects</span></h1>
+                <p class="section-description">Explore my latest work and personal projects</p>
+            </div>
+
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web Development</button>
+                <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+                <button class="filter-btn" data-filter="design">UI/UX Design</button>
+            </div>
+
+            <div class="projects-container">
+                <article class="project" data-category="web">
+                    <div class="project-image">
+                        <img src="assets/project1.jpg" alt="E-commerce Platform" loading="lazy">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" aria-label="View Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link" aria-label="View Source Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h2>E-commerce Platform</h2>
+                        <p>A full-stack e-commerce solution with modern features and responsive design.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project" data-category="mobile">
+                    <div class="project-image">
+                        <img src="assets/project2.jpg" alt="Task Management App" loading="lazy">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" aria-label="View Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link" aria-label="View Source Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h2>Task Management App</h2>
+                        <p>A collaborative task management application with real-time updates.</p>
+                        <div class="project-tech">
+                            <span>Flutter</span>
+                            <span>Firebase</span>
+                            <span>Dart</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project" data-category="design">
+                    <div class="project-image">
+                        <img src="assets/project3.jpg" alt="Portfolio Website" loading="lazy">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" aria-label="View Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link" aria-label="View Source Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h2>Portfolio Website</h2>
+                        <p>A modern portfolio website showcasing creative work and skills.</p>
+                        <div class="project-tech">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Hamza Amir. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            header.classList.toggle('scrolled', window.scrollY > 0);
+        });
+
+        // Project filtering
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const projects = document.querySelectorAll('.project');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
+
+                const filter = button.getAttribute('data-filter');
+
+                projects.forEach(project => {
+                    if (filter === 'all' || project.getAttribute('data-category') === filter) {
+                        project.style.display = 'block';
+                        setTimeout(() => {
+                            project.style.opacity = '1';
+                            project.style.transform = 'scale(1)';
+                        }, 100);
+                    } else {
+                        project.style.opacity = '0';
+                        project.style.transform = 'scale(0.8)';
+                        setTimeout(() => {
+                            project.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // Add loading animation
+        document.addEventListener('DOMContentLoaded', () => {
+            document.body.classList.add('loaded');
+        });
+    </script>
 </body>
 </html>
