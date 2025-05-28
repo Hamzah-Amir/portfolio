@@ -1,7 +1,5 @@
 # Hamza Amir - Software Developer Portfolio
 
-![Portfolio Preview](assets/project3.jpg)
-
 ## 📋 Overview
 
 A professional portfolio website showcasing my skills, projects, and experience as a software developer. The website features a modern, responsive design with smooth animations and an intuitive user interface.
