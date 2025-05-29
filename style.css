@@ -497,6 +497,11 @@ footer {
     transition: color 0.3s ease;
 }
 
+.footer-links span {
+    color: var(--text-secondary);
+    margin: 0 10px;
+}
+
 .footer-links a:hover {
     color: var(--primary-color);
 }
