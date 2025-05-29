@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /assets/
 
-Sitemap: https://your-domain.com/sitemap.xml 
+Sitemap: https://hamza-orcin.vercel.app/sitemap.xml
