@@ -19,6 +19,13 @@
     <meta name="twitter:description" content="Freelance Web Developer specializing in creating responsive, modern websites and web applications.">
     <meta name="twitter:image" content="assets/My Image.png">
     <link rel="canonical" href="https://your-domain.com">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="script.js" as="script">
+    <link rel="preload" href="assets/My Image.png" as="image">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style">
+    
     <title>Hamza Amir - Web Developer Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="assets/favicon.png" type="image/png">
@@ -28,7 +35,7 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
         (function() {
-            emailjs.init("TZTb_jFUVsEPUUDpy"); // <--- Replace "YOUR_PUBLIC_KEY" with your actual EmailJS Public Key
+            emailjs.init("TZTb_jFUVsEPUUDpy");
         })();
     </script>
 </head>
@@ -80,7 +87,7 @@
                 </div>
             </div>
             <div class="profile-img">
-                <img src="assets/My Image.png" alt="Hamza Amir - Software Developer" loading="lazy" width="300" height="350">
+                <img src="assets/My Image.png" alt="Hamza Amir - Software Developer" loading="eager" width="300" height="350" fetchpriority="high">
             </div>
         </section>
 
