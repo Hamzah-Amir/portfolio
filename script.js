@@ -6,19 +6,79 @@ window.addEventListener('load', function() {
 // Contact Form Handling
 document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.querySelector('.contact-form');
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const messageInput = document.getElementById('message');
+    const nameError = document.getElementById('name-error');
+    const emailError = document.getElementById('email-error');
+    const messageError = document.getElementById('message-error');
+    const formStatusMessage = document.getElementById('form-status-message');
+    const submitBtn = contactForm.querySelector('.submit-btn');
+    
+    // Function to display error message
+    function displayError(element, message) {
+        element.textContent = message;
+        element.style.color = 'red'; // Style for error messages
+    }
+    
+    // Function to clear error message
+    function clearError(element) {
+        element.textContent = '';
+    }
+    
+    // Function to validate email format
+    function isValidEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
     
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
+        // Clear previous errors and status messages
+        clearError(nameError);
+        clearError(emailError);
+        clearError(messageError);
+        formStatusMessage.textContent = '';
+        formStatusMessage.style.color = '';
+        
+        let isValid = true;
+        
+        // Validate inputs
+        if (nameInput.value.trim() === '') {
+            displayError(nameError, 'Name is required');
+            isValid = false;
+        }
+        
+        if (emailInput.value.trim() === '') {
+            displayError(emailError, 'Email is required');
+            isValid = false;
+        } else if (!isValidEmail(emailInput.value.trim())) {
+            displayError(emailError, 'Please enter a valid email address');
+            isValid = false;
+        }
+        
+        if (messageInput.value.trim() === '') {
+            displayError(messageError, 'Message is required');
+            isValid = false;
+        }
+        
+        if (!isValid) {
+            formStatusMessage.textContent = 'Please fix the errors above.';
+            formStatusMessage.style.color = 'red';
+            return; // Stop if validation fails
+        }
+        
         // Get form values
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
+        const name = nameInput.value.trim();
+        const email = emailInput.value.trim();
+        const message = messageInput.value.trim();
         
         // Show loading state
-        const submitBtn = contactForm.querySelector('.submit-btn');
         submitBtn.textContent = 'Sending...';
         submitBtn.disabled = true;
+        formStatusMessage.textContent = 'Sending your message...';
+        formStatusMessage.style.color = 'orange';
         
         // Send email using EmailJS
         emailjs.send("hamza_portfolio_mail", "template_owp6fuj", {
@@ -32,21 +92,29 @@ document.addEventListener('DOMContentLoaded', function() {
             // Clear form
             contactForm.reset();
             
-            // Close modal
-            const modal = document.getElementById('contact-modal');
-            modal.style.display = 'none';
+            // Close modal after a delay or provide a close button
+            // For now, we'll just update the status message and clear inputs
             
-            // Show success message
-            alert('Thank you for your message! I will get back to you soon.');
-        })
-        .catch(function(error) {
-            alert('Sorry, there was an error sending your message. Please try again.');
+            formStatusMessage.textContent = 'Thank you for your message! I will get back to you soon.';
+            formStatusMessage.style.color = 'green';
+            
+            // Optional: Auto-close modal after a few seconds
+            setTimeout(() => {
+                const modal = document.getElementById('contact-modal');
+                modal.style.display = 'none';
+            }, 5000); // Close after 5 seconds
+            
+        }, function(error) {
+            formStatusMessage.textContent = 'Sorry, there was an error sending your message. Please try again.';
+            formStatusMessage.style.color = 'red';
             console.error('EmailJS error:', error);
         })
         .finally(function() {
-            // Reset button state
-            submitBtn.textContent = 'Send Message';
-            submitBtn.disabled = false;
+            // Reset button state after a short delay to show status message
+            setTimeout(() => {
+                submitBtn.textContent = 'Send Message';
+                submitBtn.disabled = false;
+            }, 1000); // Delay reset by 1 second
         });
     });
 });
