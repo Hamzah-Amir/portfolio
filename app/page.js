@@ -37,7 +37,7 @@ export default function Home() {
               <div className="relative h-64 w-full overflow-hidden">
                 <Image
                   src="/inboxpilot.png" 
-                  alt="Enterprise SaaS Platform" 
+                  alt="InboxPilot SaaS Platform" 
                   fill
                   className="object-fill"
                 />
@@ -46,9 +46,11 @@ export default function Home() {
               {/* Content Section */}
               <div className="p-6 flex flex-col gap-4 relative">
                 <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <Link target='_blank' href='https://www.inboxpilot.pro' >
                   <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>
+                  </Link>
                 </div>
                 
                 <h3 className="text-2xl font-bold text-white">Enterprise SaaS Platform</h3>
@@ -62,13 +64,16 @@ export default function Home() {
                     Next.js
                   </span>
                   <span className="px-3 py-1 bg-[#252525] text-gray-300 rounded-lg text-sm border border-gray-700">
-                    TypeScript
+                    JavaScript
                   </span>
                   <span className="px-3 py-1 bg-[#252525] text-gray-300 rounded-lg text-sm border border-gray-700">
-                    PostgreSQL
+                    MySQL
                   </span>
                   <span className="px-3 py-1 bg-[#252525] text-gray-300 rounded-lg text-sm border border-gray-700">
-                    Redis
+                    LLMs
+                  </span>
+                  <span className="px-3 py-1 bg-[#252525] text-gray-300 rounded-lg text-sm border border-gray-700">
+                    Prisma
                   </span>
                 </div>
               </div>
@@ -79,17 +84,17 @@ export default function Home() {
               {/* Image Section */}
               <div className="relative h-64 w-full overflow-hidden">
                 <Image 
-                  src="/sample.png" 
-                  alt="Mobile-First E-Commerce" 
+                  src="/shopScribe.png" 
+                  alt="AI-Powered product description gen" 
                   fill
-                  className="object-fill"
+                  className="object-fill  "
                 />
               </div>
               
               {/* Content Section */}
               <div className="p-6 flex flex-col gap-4 relative">
                 <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity">
-                 <Link target='_blank' href='https://www.youtube.com'>
+                 <Link target='_blank' href='http://shop-scribe-xi.vercel.app/'>
                   <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>
@@ -106,13 +111,16 @@ export default function Home() {
                     Next.js
                   </span>
                   <span className="px-3 py-1 bg-[#252525] text-gray-300 rounded-lg text-sm border border-gray-700">
-                    Stripe
+                    JavaScript
                   </span>
                   <span className="px-3 py-1 bg-[#252525] text-gray-300 rounded-lg text-sm border border-gray-700">
-                    Vercel
+                    MySQL
                   </span>
                   <span className="px-3 py-1 bg-[#252525] text-gray-300 rounded-lg text-sm border border-gray-700">
                     Prisma
+                  </span>
+                  <span className="px-3 py-1 bg-[#252525] text-gray-300 rounded-lg text-sm border border-gray-700">
+                    LLMs
                   </span>
                 </div>
               </div>
