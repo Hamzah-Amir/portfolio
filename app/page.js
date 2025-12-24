@@ -132,15 +132,66 @@ export default function Home() {
             <h1 className='text-5xl font-normal'>Tech Stack</h1>
             <p className='text-neutral-400 mt-2'>Tools I use to build modern web applications</p>
           </div>
-          <div className='flex items-center gap-2 py-4 px-32'>
-            <div className="p-2 bg-blue-500/10 rounded-lg" bis_skin_checked="1">
-              <Image src='/frontend.svg'
-                alt='Frontend logo'
-                width={24}
-                height={24}
-              >
-              </Image></div>
-            <p className='font-bold'>Frontend</p>
+          <div className='tech-stack'>
+            <div className='flex items-center gap-2 py-4 px-32'>
+              <div className="p-2 bg-blue-500/10 rounded-lg" bis_skin_checked="1">
+                <Image src='/frontend.svg'
+                  alt='Frontend logo'
+                  width={24}
+                  height={24}
+                >
+                </Image></div>
+              <p className='font-bold'>Frontend</p>
+            </div>
+
+            {/* Pill tag list */}
+            <div className='pill px-32 pb-20'>
+              <div className='flex flex-wrap gap-3 items-center'>
+                <span className='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgb(28,27,31)] text-sm text-[#d1d1d1] border border-gray-700 shadow-sm hover:scale-105 transition-transform duration-200'>
+                  Rect.js
+                </span>
+                <span className='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgb(28,27,31)] text-sm text-[#d1d1d1] border border-gray-700 shadow-sm hover:scale-105 transition-transform duration-200'>
+                  JavaScript
+                </span>
+                <span className='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgb(28,27,31)] text-sm text-[#d1d1d1] border border-gray-700 shadow-sm hover:scale-105 transition-transform duration-200'>
+                  Tailwind CSS
+                </span>
+                <span className='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgb(28,27,31)] text-sm text-[#d1d1d1] border border-gray-700 shadow-sm hover:scale-105 transition-transform duration-200'>
+                  CSS
+                </span>
+              </div>
+            </div>
+            <div className='flex items-center mt-[-40px] gap-2 py-4 px-32'>
+              <div class="p-2 bg-violet-500/10 rounded-lg" bis_skin_checked="1">
+                <Image src='/backend.svg'
+                  alt='Backend logo'
+                  width={24}
+                  height={24}
+                >
+                </Image></div>
+              <p className='font-bold'>Backend</p>
+            </div>
+
+            {/* Pill tag list */}
+            <div className='pill px-32 pb-20'>
+              <div className='flex flex-wrap gap-3 items-center'>
+                <span className='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgb(28,27,31)] text-sm text-[#d1d1d1] border border-gray-700 shadow-sm hover:scale-105 transition-transform duration-200'>
+                  Node.js
+                </span>
+                <span className='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgb(28,27,31)] text-sm text-[#d1d1d1] border border-gray-700 shadow-sm hover:scale-105 transition-transform duration-200'>
+                  Next.js
+                </span>
+                <span className='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgb(28,27,31)] text-sm text-[#d1d1d1] border border-gray-700 shadow-sm hover:scale-105 transition-transform duration-200'>
+                  Django
+                </span>
+                <span className='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgb(28,27,31)] text-sm text-[#d1d1d1] border border-gray-700 shadow-sm hover:scale-105 transition-transform duration-200'>
+                  MySQL
+                </span>
+                <span className='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgb(28,27,31)] text-sm text-[#d1d1d1] border border-gray-700 shadow-sm hover:scale-105 transition-transform duration-200'>
+                  Prisma
+                </span>
+              </div>
+            </div>
           </div>
         </section>
       </main>
