@@ -268,6 +268,34 @@ export default function Home() {
 
           </div>
         </section>
+
+        <section className='Experience min-h-screen min-w-screen bg-[rgb(10,10,10)] py-24 px-6'>
+          <div className='max-w-4xl mx-auto'>
+            <div className='mb-16'>
+            <h1 className='text-4xl mb-4 md:text-5xl tracking-tight'>Experience</h1>
+            <p className='text-lg text-neutral-400'>Building impactful solutions accross industries</p>
+            </div>
+            <div className='flex'>
+              <div className='line'></div>
+              <div className='flex flex-col space-y-1 pl-8 pb-12 gap-1'>
+                <p className='text-neutral-400 text-lg'>Aug 2025-present</p>
+                <p>Senior full Stack Developer and Automation Engineer</p>
+                <p className='text-neutral-400'>Virtual Trading LTD</p>
+                <p className='text-neutral-400 mt-3'>Automated product research for their Amazon Store via autonomous bots</p>
+              </div>
+            </div>
+
+            <div className='flex'>
+              <div className='line'></div>
+              <div className='flex flex-col space-y-1 pb-12 pl-8 gap-0'>
+                <p className='text-neutral-400 text-lg'>Sept 2025 - November 2025</p>
+                <p>Inbox Pilot - Cold Email Personalisation SaaS</p>
+                <p className='text-neutral-400'>Founder and Developer</p>
+                <p>Developed Inbox Pilot using Next.js and power of GPT to generate cold personalized Emails</p>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
     </>
   );
