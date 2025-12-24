@@ -36,28 +36,28 @@ export default function Home() {
               {/* Image Section */}
               <div className="relative h-64 w-full overflow-hidden">
                 <Image
-                  src="/inboxpilot.png" 
-                  alt="InboxPilot SaaS Platform" 
+                  src="/inboxpilot.png"
+                  alt="InboxPilot SaaS Platform"
                   fill
                   className="object-fill"
                 />
               </div>
-              
+
               {/* Content Section */}
               <div className="p-6 flex flex-col gap-4 relative">
                 <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity">
                   <Link target='_blank' href='https://www.inboxpilot.pro' >
-                  <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
+                    <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
                   </Link>
                 </div>
-                
+
                 <h3 className="text-2xl font-bold text-white">Enterprise SaaS Platform</h3>
                 <p className="text-gray-400 text-base leading-relaxed">
                   Built a multi-tenant SaaS application serving 10k+ users with real-time collaboration features.
                 </p>
-                
+
                 {/* Technology Tags */}
                 <div className="flex flex-wrap gap-2 mt-2">
                   <span className="px-3 py-1 bg-[#252525] text-gray-300 rounded-lg text-sm border border-gray-700">
@@ -83,28 +83,28 @@ export default function Home() {
             <div className="project-card group bg-[#1a1a1a] rounded-2xl overflow-hidden border border-gray-800 hover:border-gray-700 transition-all duration-300 flex flex-col w-full md:w-[calc(50%-1rem)] max-w-[500px]">
               {/* Image Section */}
               <div className="relative h-64 w-full overflow-hidden">
-                <Image 
-                  src="/shopScribe.png" 
-                  alt="AI-Powered product description gen" 
+                <Image
+                  src="/shopScribe.png"
+                  alt="AI-Powered product description gen"
                   fill
                   className="object-fill  "
                 />
               </div>
-              
+
               {/* Content Section */}
               <div className="p-6 flex flex-col gap-4 relative">
                 <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity">
-                 <Link target='_blank' href='http://shop-scribe-xi.vercel.app/'>
-                  <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
-                 </Link>
+                  <Link target='_blank' href='http://shop-scribe-xi.vercel.app/'>
+                    <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </Link>
                 </div>
                 <h3 className="text-2xl font-bold text-white">Mobile-First E-Commerce</h3>
                 <p className="text-gray-400 text-base leading-relaxed">
                   Developed a headless commerce platform with 40% faster load times and 99.9% uptime.
                 </p>
-                
+
                 {/* Technology Tags */}
                 <div className="flex flex-wrap gap-2 mt-2">
                   <span className="px-3 py-1 bg-[#252525] text-gray-300 rounded-lg text-sm border border-gray-700">
@@ -125,6 +125,22 @@ export default function Home() {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+        <section className='tech-stack min-h-screen bg-[rgb(16,16,16)]'>
+          <div className='flex flex-col justify-center p-20 px-32'>
+            <h1 className='text-5xl font-normal'>Tech Stack</h1>
+            <p className='text-neutral-400 mt-2'>Tools I use to build modern web applications</p>
+          </div>
+          <div className='flex items-center gap-2 py-4 px-32'>
+            <div className="p-2 bg-blue-500/10 rounded-lg" bis_skin_checked="1">
+              <Image src='/frontend.svg'
+                alt='Frontend logo'
+                width={24}
+                height={24}
+              >
+              </Image></div>
+            <p className='font-bold'>Frontend</p>
           </div>
         </section>
       </main>
