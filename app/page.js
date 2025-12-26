@@ -306,6 +306,49 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <section className='CTA min-h-[40vh] min-w-screen py-32 px-24 bg-[rgb(16,16,16)]'>
+          <div className='max-w-4xl mx-auto text-center'>
+            <div className='pb-12'>
+              <h1 className='text-5xl pb-5'>
+                Let&apos;s Build Something
+              </h1>
+              <p className='text-lg text-neutral-400'>I&apos;m always interested in hearing about new projects and oppurtunities</p>
+            </div>
+            <div className='bg-white flex gap-2 justify-center items-center px-8 py-5 w-32 mx-[22vw] rounded-2xl p-3'>
+              <Image src='email.svg'
+                height={24}
+                width={24}
+                alt='Email Svg'
+              ></Image>
+              <p className='text-black'>Send Email</p>
+            </div>
+
+            <div className='flex gap-5 min-w-xl justify-center '>
+
+              <div className="p-2 bg-[rgb(38,38,38)] px-3 mt-6 ml-[20vw] flex justify-center items-center rounded-lg">
+                <Link href="https://github.com/Hamzah-Amir" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                  <Image src='github.svg'
+                    alt='Github Logo'
+                    height={24}
+                    width={24}
+                  ></Image>
+                </Link>
+              </div>
+
+              <div className="p-2 bg-[rgb(38,38,38)] px-3 mt-6 flex justify-center items-center rounded-lg">
+                <Link href="https://github.com/Hamzah-Amir" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                  <Image src='linkedIn.svg'
+                    alt='Github Logo'
+                    height={24}
+                    width={24}
+                  ></Image>
+                </Link>
+              </div>
+
+            </div>
+          </div>
+        </section>
       </main>
     </>
   );
