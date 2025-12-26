@@ -5,7 +5,6 @@ import Link from 'next/link';
 
 export default function Home() {
 
-
   return (
     <>
       <main>
@@ -272,16 +271,17 @@ export default function Home() {
         <section className='Experience min-h-screen min-w-screen bg-[rgb(10,10,10)] py-24 px-6'>
           <div className='max-w-4xl mx-auto'>
             <div className='mb-16'>
-            <h1 className='text-4xl mb-4 md:text-5xl tracking-tight'>Experience</h1>
-            <p className='text-lg text-neutral-400'>Building impactful solutions accross industries</p>
+              <h1 className='text-4xl mb-4 md:text-5xl tracking-tight'>Experience</h1>
+              <p className='text-lg text-neutral-400'>Building impactful solutions accross industries</p>
             </div>
+
             <div className='flex'>
               <div className='line'></div>
-              <div className='flex flex-col space-y-1 pl-8 pb-12 gap-1'>
-                <p className='text-neutral-400 text-lg'>Aug 2025-present</p>
-                <p>Senior full Stack Developer and Automation Engineer</p>
-                <p className='text-neutral-400'>Virtual Trading LTD</p>
-                <p className='text-neutral-400 mt-3'>Automated product research for their Amazon Store via autonomous bots</p>
+              <div className='flex flex-col space-y-1 pb-12 pl-8 gap-0'>
+                <p className='text-neutral-400 text-lg'>December 2025 - Present</p>
+                <p>Serfelitap</p>
+                <p className='text-neutral-400'>Senior Full-Stack Developer</p>
+                <p>Serfelitap is a smart assistant that scans all stores in Azerbaijan to find you the cheapest products.</p>
               </div>
             </div>
 
@@ -292,6 +292,16 @@ export default function Home() {
                 <p>Inbox Pilot - Cold Email Personalisation SaaS</p>
                 <p className='text-neutral-400'>Founder and Developer</p>
                 <p>Developed Inbox Pilot using Next.js and power of GPT to generate cold personalized Emails</p>
+              </div>
+            </div>
+
+            <div className='flex'>
+              <div className='line'></div>
+              <div className='flex flex-col space-y-1 pl-8 pb-12 gap-1'>
+                <p className='text-neutral-400 text-lg'>Aug 2025-present</p>
+                <p>Senior full Stack Developer and Automation Engineer</p>
+                <p className='text-neutral-400'>Virtual Trading LTD</p>
+                <p className='text-neutral-400 mt-3'>Automated product research for their Amazon Store via autonomous bots</p>
               </div>
             </div>
           </div>
