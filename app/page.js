@@ -268,7 +268,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className='Experience min-h-screen min-w-screen bg-[rgb(10,10,10)] py-24 px-6'>
+        <section className='Experience min-h-[70vh] min-w-screen bg-[rgb(10,10,10)] py-24 px-6'>
           <div className='max-w-4xl mx-auto'>
             <div className='mb-16'>
               <h1 className='text-4xl mb-4 md:text-5xl tracking-tight'>Experience</h1>
@@ -307,13 +307,13 @@ export default function Home() {
           </div>
         </section>
 
-        <section className='CTA min-h-[40vh] min-w-screen py-32 px-24 bg-[rgb(16,16,16)]'>
+        <section className='CTA min-h-[35vh] min-w-screen py-32 px-24 bg-[rgb(16,16,16)]'>
           <div className='max-w-4xl mx-auto text-center'>
             <div className='pb-12'>
               <h1 className='text-5xl pb-5'>
                 Let&apos;s Build Something
               </h1>
-              <p className='text-lg text-neutral-400'>I&apos;m always interested in hearing about new projects and oppurtunities</p>
+              <p className='text-[18px] text-neutral-400'>I&apos;m always interested in hearing about new projects and oppurtunities</p>
             </div>
             <div className='bg-white flex gap-2 justify-center items-center px-8 py-5 w-32 mx-[22vw] rounded-2xl p-3'>
               <Image src='email.svg'
@@ -324,9 +324,9 @@ export default function Home() {
               <p className='text-black'>Send Email</p>
             </div>
 
-            <div className='flex gap-5 min-w-xl justify-center '>
+            <div className='flex gap-6 min-w-5xl justify-center '>
 
-              <div className="p-2 bg-[rgb(38,38,38)] px-3 mt-6 ml-[20vw] flex justify-center items-center rounded-lg">
+              <div className="p-2 bg-[rgb(38,38,38)] px-3 mt-6 flex justify-center items-center rounded-lg">
                 <Link href="https://github.com/Hamzah-Amir" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                   <Image src='github.svg'
                     alt='Github Logo'
@@ -337,7 +337,7 @@ export default function Home() {
               </div>
 
               <div className="p-2 bg-[rgb(38,38,38)] px-3 mt-6 flex justify-center items-center rounded-lg">
-                <Link href="https://github.com/Hamzah-Amir" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <Link href="https://www.linkedin.com/in/hamza-amir-024502320/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                   <Image src='linkedIn.svg'
                     alt='Github Logo'
                     height={24}
@@ -350,6 +350,9 @@ export default function Home() {
           </div>
         </section>
       </main>
+      <footer className='min-h-14 text-[14px] text-neutral-400 flex justify-center items-center'>
+        &copy; 2025 Hamza Amir. Built with Next.js & Tailwind CSS
+      </footer>
     </>
   );
 }
