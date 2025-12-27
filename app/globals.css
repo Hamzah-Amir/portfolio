@@ -27,3 +27,16 @@ body {
   padding: 0;
   margin: 0;
 }
+
+.hero-animation{
+  animation: hero-animate 1s ease 0s 1 normal none;
+}
+
+@keyframes hero-animate {
+  from{
+    transform: translateY(3%);
+  }
+  to{
+    transform: translateY(-20px);
+  }
+}
