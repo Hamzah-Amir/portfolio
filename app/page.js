@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <main>
-        <section className="relative min-h-screen overflow-hidden bg-[#0c0c0c] flex items-center justify-center">
+        <section className="hero-animation py-10 relative min-h-screen overflow-hidden bg-[#0c0c0c] flex items-center justify-center">
           <div className="hero-content mt-[-100px] w-[42vw] flex flex-col gap-4 items-center justify-center">
             <span className="bg-[rgb(28,27,31)] font-inter text-[#838384] border border-gray-700 rounded-2xl text-sm p-[8px] px-4">Available for new oppurtunities</span>
             <h1 className="text-8xl font-bold text-white">Hamza Amir</h1>
@@ -20,6 +20,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+
         <section className="projects bg-black min-h-screen">
           <div className="content">
             <span className="flex flex-col gap-4">
