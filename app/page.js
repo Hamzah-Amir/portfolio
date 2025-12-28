@@ -8,8 +8,8 @@ export default function Home() {
   return (
     <>
       <main>
-        <section className="hero-animation py-10 relative min-h-screen overflow-hidden bg-[#0c0c0c] flex items-center justify-center">
-          <div className="hero-content mt-[-100px] w-[42vw] flex flex-col gap-4 items-center justify-center">
+        <section className="py-10 relative min-h-screen overflow-hidden bg-[#0c0c0c] flex animate-fade-up items-center justify-center ">
+          <div className="hero-content mt-[-100px] w-[42vw] flex flex-col gap-4 items-center justify-center animate-slideInUp">
             <span className="bg-[rgb(28,27,31)] font-inter text-[#838384] border border-gray-700 rounded-2xl text-sm p-[8px] px-4">Available for new oppurtunities</span>
             <h1 className="text-8xl font-bold text-white">Hamza Amir</h1>
             <p className="text-[rgb(161,161,161)] text-4xl">Full Stack / Next.js Developer</p>
