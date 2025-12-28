@@ -39,5 +39,5 @@ body {
 }
 
 .animate-slideInUp {
-  animation: slideInUp 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: slideInUp 1s ease-out forwards;
 }
