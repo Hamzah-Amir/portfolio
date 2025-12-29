@@ -44,7 +44,7 @@ body {
 }
 
 .animate-project-slideInUp {
-  animation: slideInUp 0.4s ease-in-out forwards;
+  animation: slideInUp 0.8s ease-in-out forwards;
 }
 
 .animate-project-card-slideInUp {

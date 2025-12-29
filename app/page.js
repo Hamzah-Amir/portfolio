@@ -5,15 +5,28 @@ import Link from 'next/link';
 import { useState, useEffect, useRef } from 'react';
 
 export default function Home() {
-  const [isVisible, setIsVisible] = useState(false);
-  const projectsRef = useRef(null);
+  const [visibleElements, setVisibleElements] = useState({
+    header: false,
+    card1: false,
+    card2: false,
+  });
+  
+  const headerRef = useRef(null);
+  const card1Ref = useRef(null);
+  const card2Ref = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setIsVisible(true);
+            const elementId = entry.target.getAttribute('data-animate-id');
+            if (elementId) {
+              setVisibleElements((prev) => ({
+                ...prev,
+                [elementId]: true,
+              }));
+            }
           }
         });
       },
@@ -23,15 +36,27 @@ export default function Home() {
       }
     );
 
-    const currentRef = projectsRef.current;
-    if (currentRef) {
-      observer.observe(currentRef);
-    }
+    const refs = [
+      { ref: headerRef, id: 'header' },
+      { ref: card1Ref, id: 'card1' },
+      { ref: card2Ref, id: 'card2' },
+    ];
+
+    refs.forEach(({ ref, id }) => {
+      const currentRef = ref.current;
+      if (currentRef) {
+        currentRef.setAttribute('data-animate-id', id);
+        observer.observe(currentRef);
+      }
+    });
 
     return () => {
-      if (currentRef) {
-        observer.unobserve(currentRef);
-      }
+      refs.forEach(({ ref }) => {
+        const currentRef = ref.current;
+        if (currentRef) {
+          observer.unobserve(currentRef);
+        }
+      });
     };
   }, []);
 
@@ -52,7 +77,7 @@ export default function Home() {
         </section>
 
         <section className="projects bg-black min-h-screen">
-          <div ref={projectsRef} className={`content ${isVisible ? 'animate-project-slideInUp' : 'opacity-0'}`}>
+          <div ref={headerRef} className={`content ${visibleElements.header ? 'animate-project-slideInUp' : 'opacity-0'}`}>
             <span className="flex flex-col gap-4">
               <h1 className="text-5xl mx-36 mt-20">
                 Featured Projects
@@ -63,7 +88,7 @@ export default function Home() {
           <div className="projects-container flex flex-wrap justify-center items-start gap-8 px-8 md:px-16 lg:px-36 py-20">
 
             {/* Enterprise SaaS Platform Card */}
-            <div ref={projectsRef} className={`project-card group ${isVisible ? 'animate-project-card-slideInUp' : 'opacity-0'} bg-[#1a1a1a] rounded-2xl overflow-hidden border border-gray-800 hover:border-gray-700 transition-all duration-300 flex flex-col md:w-[calc(50%-1rem)] min-w-[500px]`}>
+            <div ref={card1Ref} className={`project-card group ${visibleElements.card1 ? 'animate-project-card-slideInUp' : 'opacity-0'} bg-[#1a1a1a] rounded-2xl overflow-hidden border border-gray-800 hover:border-gray-700 transition-all duration-300 flex flex-col md:w-[calc(50%-1rem)] min-w-[500px]`}>
               {/* Image Section */}
               <div className="relative h-64 w-full overflow-hidden">
                 <Image
@@ -111,7 +136,7 @@ export default function Home() {
             </div>
 
             {/* Mobile-First E-Commerce Card */}
-            <div ref={projectsRef} className={`project-card group ${isVisible ? 'animate-project-card-slideInUp' : 'opacity-0'} bg-[#1a1a1a] rounded-2xl overflow-hidden border border-gray-800 hover:border-gray-700 transition-all duration-300 flex flex-col md:w-[calc(50%-1rem)] min-w-[500px]`}>
+            <div ref={card2Ref} className={`project-card group ${visibleElements.card2 ? 'animate-project-card-slideInUp' : 'opacity-0'} bg-[#1a1a1a] rounded-2xl overflow-hidden border border-gray-800 hover:border-gray-700 transition-all duration-300 flex flex-col md:w-[calc(50%-1rem)] min-w-[500px]`}>
               {/* Image Section */}
               <div className="relative h-64 w-full overflow-hidden">
                 <Image
