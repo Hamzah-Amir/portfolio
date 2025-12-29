@@ -2,8 +2,38 @@
 
 import Image from 'next/image'
 import Link from 'next/link';
+import { useState, useEffect, useRef } from 'react';
 
 export default function Home() {
+  const [isVisible, setIsVisible] = useState(false);
+  const projectsRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+          }
+        });
+      },
+      {
+        threshold: 0.1, // Trigger when 10% of the element is visible
+        rootMargin: '0px 0px -50px 0px', // Trigger slightly before fully visible
+      }
+    );
+
+    const currentRef = projectsRef.current;
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, []);
 
   return (
     <>
@@ -22,7 +52,7 @@ export default function Home() {
         </section>
 
         <section className="projects bg-black min-h-screen">
-          <div className="content">
+          <div ref={projectsRef} className={`content ${isVisible ? 'animate-project-slideInUp' : 'opacity-0'}`}>
             <span className="flex flex-col gap-4">
               <h1 className="text-5xl mx-36 mt-20">
                 Featured Projects
@@ -31,8 +61,9 @@ export default function Home() {
             </span>
           </div>
           <div className="projects-container flex flex-wrap justify-center items-start gap-8 px-8 md:px-16 lg:px-36 py-20">
+
             {/* Enterprise SaaS Platform Card */}
-            <div className="project-card group bg-[#1a1a1a] rounded-2xl overflow-hidden border border-gray-800 hover:border-gray-700 transition-all duration-300 flex flex-col w-full md:w-[calc(50%-1rem)] max-w-[500px]">
+            <div ref={projectsRef} className={`project-card group ${isVisible ? 'animate-project-card-slideInUp' : 'opacity-0'} bg-[#1a1a1a] rounded-2xl overflow-hidden border border-gray-800 hover:border-gray-700 transition-all duration-300 flex flex-col md:w-[calc(50%-1rem)] min-w-[500px]`}>
               {/* Image Section */}
               <div className="relative h-64 w-full overflow-hidden">
                 <Image
@@ -80,7 +111,7 @@ export default function Home() {
             </div>
 
             {/* Mobile-First E-Commerce Card */}
-            <div className="project-card group bg-[#1a1a1a] rounded-2xl overflow-hidden border border-gray-800 hover:border-gray-700 transition-all duration-300 flex flex-col w-full md:w-[calc(50%-1rem)] max-w-[500px]">
+            <div ref={projectsRef} className={`project-card group ${isVisible ? 'animate-project-card-slideInUp' : 'opacity-0'} bg-[#1a1a1a] rounded-2xl overflow-hidden border border-gray-800 hover:border-gray-700 transition-all duration-300 flex flex-col md:w-[calc(50%-1rem)] min-w-[500px]`}>
               {/* Image Section */}
               <div className="relative h-64 w-full overflow-hidden">
                 <Image
