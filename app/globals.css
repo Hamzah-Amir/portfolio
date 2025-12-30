@@ -40,13 +40,34 @@ body {
 }
 
 .animate-slideInUp {
-  animation: slideInUp 0.6s ease-out forwards;
+  animation: slideInUp 0.8s ease-out forwards;
 }
 
-.animate-project-slideInUp {
-  animation: slideInUp 0.8s ease-in-out forwards;
+
+@keyframes animate-pill {
+
+  from{
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
-.animate-project-card-slideInUp {
-  animation: slideInUp 0.8s ease-in-out forwards;
+.animate-pill1-slideInUp {
+ animation: animate-pill 0.8s ease-in-out forwards 0.1s normal;
+}
+.animate-pill2-slideInUp {
+ animation: animate-pill 0.8s ease-in-out forwards 0.2s  normal;
+}
+.animate-pill3-slideInUp {
+ animation: animate-pill 0.8s ease-in-out forwards 0.3s  normal;
+}
+.animate-pill4-slideInUp {
+ animation: animate-pill 0.8s ease-in-out forwards 0.4s  normal;
+}
+.animate-pill5-slideInUp {
+ animation: animate-pill 0.8s ease-in-out forwards 0.5s  normal;
 }

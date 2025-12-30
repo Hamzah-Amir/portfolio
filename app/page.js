@@ -9,11 +9,15 @@ export default function Home() {
     header: false,
     card1: false,
     card2: false,
+    techref: false,
+    frontendref: false
   });
   
   const headerRef = useRef(null);
   const card1Ref = useRef(null);
   const card2Ref = useRef(null);
+  const techref = useRef(null);
+  const frontendref = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -40,6 +44,8 @@ export default function Home() {
       { ref: headerRef, id: 'header' },
       { ref: card1Ref, id: 'card1' },
       { ref: card2Ref, id: 'card2' },
+      { ref: techref, id: 'techref' },
+      { ref: frontendref, id: 'frontendref' },
     ];
 
     refs.forEach(({ ref, id }) => {
@@ -77,7 +83,7 @@ export default function Home() {
         </section>
 
         <section className="projects bg-black min-h-screen">
-          <div ref={headerRef} className={`content ${visibleElements.header ? 'animate-project-slideInUp' : 'opacity-0'}`}>
+          <div ref={headerRef} className={`content ${visibleElements.header ? 'animate-slideInUp' : 'opacity-0'}`}>
             <span className="flex flex-col gap-4">
               <h1 className="text-5xl mx-36 mt-20">
                 Featured Projects
@@ -136,7 +142,7 @@ export default function Home() {
             </div>
 
             {/* Mobile-First E-Commerce Card */}
-            <div ref={card2Ref} className={`project-card group ${visibleElements.card2 ? 'animate-project-card-slideInUp' : 'opacity-0'} bg-[#1a1a1a] rounded-2xl overflow-hidden border border-gray-800 hover:border-gray-700 transition-all duration-300 flex flex-col md:w-[calc(50%-1rem)] min-w-[500px]`}>
+            <div ref={card2Ref} className={`project-card group ${visibleElements.card2 ? 'animate-slideInUp' : 'opacity-0'} bg-[#1a1a1a] rounded-2xl overflow-hidden border border-gray-800 hover:border-gray-700 transition-all duration-300 flex flex-col md:w-[calc(50%-1rem)] min-w-[500px]`}>
               {/* Image Section */}
               <div className="relative h-64 w-full overflow-hidden">
                 <Image
@@ -186,7 +192,7 @@ export default function Home() {
 
         {/* Tech Stack Section */}
         <section className='tech-stack min-h-screen space-y-[-40px] bg-[rgb(16,16,16)]'>
-          <div className='flex flex-col justify-center p-20 px-32'>
+          <div ref={techref} className={`flex ${visibleElements.techref ? 'animate-slideInUp' : 'opacity-0'} flex-col justify-center p-20 px-32`}>
             <h1 className='text-5xl font-normal'>Tech Stack</h1>
             <p className='text-neutral-400 mt-2'>Tools I use to build modern web applications</p>
           </div>
@@ -205,18 +211,18 @@ export default function Home() {
               </div>
 
               {/* Pill tag list */}
-              <div className='pill px-32 pb-20'>
-                <div className='flex flex-wrap gap-3 items-center'>
-                  <span className='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgb(28,27,31)] text-sm text-[#d1d1d1] border border-gray-700 shadow-sm hover:scale-105 transition-transform duration-200'>
+              <div className={`pill px-32 pb-20 `}>
+                <div  className={`pill   flex flex-wrap gap-3 items-center`}>
+                  <span ref={frontendref} className={`inline-flex ${visibleElements.frontendref ? 'animate-pill1-slideInUp' : 'opacity-0'} items-center gap-2 px-4 py-2 rounded-full bg-[rgb(28,27,31)] text-sm text-[#d1d1d1] border border-gray-700 shadow-sm hover:scale-105 transition-transform duration-200`}>
                     React.js
                   </span>
-                  <span className='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgb(28,27,31)] text-sm text-[#d1d1d1] border border-gray-700 shadow-sm hover:scale-105 transition-transform duration-200'>
+                  <span ref={frontendref} className={`inline-flex ${visibleElements.frontendref ? 'animate-pill2-slideInUp' : 'opacity-0'} items-center gap-2 px-4 py-2 rounded-full bg-[rgb(28,27,31)] text-sm text-[#d1d1d1] border border-gray-700 shadow-sm hover:scale-105 transition-transform duration-200`}>
                     JavaScript
                   </span>
-                  <span className='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgb(28,27,31)] text-sm text-[#d1d1d1] border border-gray-700 shadow-sm hover:scale-105 transition-transform duration-200'>
+                  <span ref={frontendref} className={`inline-flex ${visibleElements.frontendref ? 'animate-pill3-slideInUp' : 'opacity-0'} items-center gap-2 px-4 py-2 rounded-full bg-[rgb(28,27,31)] text-sm text-[#d1d1d1] border border-gray-700 shadow-sm hover:scale-105 transition-transform duration-200`}>
                     Tailwind CSS
                   </span>
-                  <span className='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgb(28,27,31)] text-sm text-[#d1d1d1] border border-gray-700 shadow-sm hover:scale-105 transition-transform duration-200'>
+                  <span ref={frontendref} className={`inline-flex ${visibleElements.frontendref ? 'animate-pill4-slideInUp' : 'opacity-0'} items-center gap-2 px-4 py-2 rounded-full bg-[rgb(28,27,31)] text-sm text-[#d1d1d1] border border-gray-700 shadow-sm hover:scale-105 transition-transform duration-200`}>
                     CSS
                   </span>
                 </div>
