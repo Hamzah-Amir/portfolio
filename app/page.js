@@ -10,7 +10,10 @@ export default function Home() {
     card1: false,
     card2: false,
     techref: false,
-    frontendref: false
+    frontendref: false,
+    backendref: false,
+    devopsref: false,
+    otherref: false,
   });
   
   const headerRef = useRef(null);
@@ -18,6 +21,9 @@ export default function Home() {
   const card2Ref = useRef(null);
   const techref = useRef(null);
   const frontendref = useRef(null);
+  const backendref = useRef(null);
+  const devopsref = useRef(null);
+  const otherref = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -46,6 +52,9 @@ export default function Home() {
       { ref: card2Ref, id: 'card2' },
       { ref: techref, id: 'techref' },
       { ref: frontendref, id: 'frontendref' },
+      { ref: backendref, id: 'backendref' },
+      { ref: devopsref, id: 'devopsref' },
+      { ref: otherref, id: 'otherref' },
     ];
 
     refs.forEach(({ ref, id }) => {
@@ -244,19 +253,19 @@ export default function Home() {
               {/* Pill tag list */}
               <div className='pill px-32 pb-20'>
                 <div className='flex flex-wrap gap-3 items-center'>
-                  <span className='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgb(28,27,31)] text-sm text-[#d1d1d1] border border-gray-700 shadow-sm hover:scale-105 transition-transform duration-200'>
+                  <span ref={backendref} className={`inline-flex items-center ${visibleElements.backendref ? 'animate-pill1-slideInUp' : 'opacity-0'} gap-2 px-4 py-2 rounded-full bg-[rgb(28,27,31)] text-sm text-[#d1d1d1] border border-gray-700 shadow-sm hover:scale-105 transition-transform duration-200`}>
                     Node.js
                   </span>
-                  <span className='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgb(28,27,31)] text-sm text-[#d1d1d1] border border-gray-700 shadow-sm hover:scale-105 transition-transform duration-200'>
+                  <span ref={backendref} className={`inline-flex items-center ${visibleElements.backendref ? 'animate-pill2-slideInUp' : 'opacity-0'} gap-2 px-4 py-2 rounded-full bg-[rgb(28,27,31)] text-sm text-[#d1d1d1] border border-gray-700 shadow-sm hover:scale-105 transition-transform duration-200`}>
                     Next.js
                   </span>
-                  <span className='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgb(28,27,31)] text-sm text-[#d1d1d1] border border-gray-700 shadow-sm hover:scale-105 transition-transform duration-200'>
+                  <span ref={backendref} className={`inline-flex items-center ${visibleElements.backendref ? 'animate-pill3-slideInUp' : 'opacity-0'} gap-2 px-4 py-2 rounded-full bg-[rgb(28,27,31)] text-sm text-[#d1d1d1] border border-gray-700 shadow-sm hover:scale-105 transition-transform duration-200`}>
                     Django
                   </span>
-                  <span className='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgb(28,27,31)] text-sm text-[#d1d1d1] border border-gray-700 shadow-sm hover:scale-105 transition-transform duration-200'>
+                  <span ref={backendref} className={`inline-flex items-center ${visibleElements.backendref ? 'animate-pill4-slideInUp' : 'opacity-0'} gap-2 px-4 py-2 rounded-full bg-[rgb(28,27,31)] text-sm text-[#d1d1d1] border border-gray-700 shadow-sm hover:scale-105 transition-transform duration-200`}>
                     MySQL
                   </span>
-                  <span className='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgb(28,27,31)] text-sm text-[#d1d1d1] border border-gray-700 shadow-sm hover:scale-105 transition-transform duration-200'>
+                  <span ref={backendref} className={`inline-flex items-center ${visibleElements.backendref ? 'animate-pill5-slideInUp' : 'opacity-0'} gap-2 px-4 py-2 rounded-full bg-[rgb(28,27,31)] text-sm text-[#d1d1d1] border border-gray-700 shadow-sm hover:scale-105 transition-transform duration-200`}>
                     Prisma
                   </span>
                 </div>
