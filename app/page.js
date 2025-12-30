@@ -287,16 +287,16 @@ export default function Home() {
               {/* Pill tag list */}
               <div className='pill px-32 pb-20'>
                 <div className='flex flex-wrap gap-3 items-center'>
-                  <span className='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgb(28,27,31)] text-sm text-[#d1d1d1] border border-gray-700 shadow-sm hover:scale-105 transition-transform duration-200'>
+                  <span ref={devopsref} className={`inline-flex items-center ${visibleElements.devopsref ? 'animate-pill1-slideInUp' : 'opacity-0'} gap-2 px-4 py-2 rounded-full bg-[rgb(28,27,31)] text-sm text-[#d1d1d1] border border-gray-700 shadow-sm hover:scale-105 transition-transform duration-200`}>
                     Vercel
                   </span>
-                  <span className='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgb(28,27,31)] text-sm text-[#d1d1d1] border border-gray-700 shadow-sm hover:scale-105 transition-transform duration-200'>
+                  <span ref={devopsref} className={`inline-flex items-center ${visibleElements.devopsref ? 'animate-pill2-slideInUp' : 'opacity-0'} gap-2 px-4 py-2 rounded-full bg-[rgb(28,27,31)] text-sm text-[#d1d1d1] border border-gray-700 shadow-sm hover:scale-105 transition-transform duration-200`}>
                     Git & Github
                   </span>
-                  <span className='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgb(28,27,31)] text-sm text-[#d1d1d1] border border-gray-700 shadow-sm hover:scale-105 transition-transform duration-200'>
+                  <span ref={devopsref} className={`inline-flex items-center ${visibleElements.devopsref ? 'animate-pill3-slideInUp' : 'opacity-0'} gap-2 px-4 py-2 rounded-full bg-[rgb(28,27,31)] text-sm text-[#d1d1d1] border border-gray-700 shadow-sm hover:scale-105 transition-transform duration-200`}>
                     VS Code
                   </span>
-                  <span className='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgb(28,27,31)] text-sm text-[#d1d1d1] border border-gray-700 shadow-sm hover:scale-105 transition-transform duration-200'>
+                  <span ref={devopsref} className={`inline-flex items-center ${visibleElements.devopsref ? 'animate-pill4-slideInUp' : 'opacity-0'} gap-2 px-4 py-2 rounded-full bg-[rgb(28,27,31)] text-sm text-[#d1d1d1] border border-gray-700 shadow-sm hover:scale-105 transition-transform duration-200`}>
                     Cursor AI
                   </span>
                 </div>
@@ -318,19 +318,19 @@ export default function Home() {
               {/* Pill tag list */}
               <div className='pill px-32 pb-20'>
                 <div className='flex flex-wrap gap-3 items-center'>
-                  <span className='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgb(28,27,31)] text-sm text-[#d1d1d1] border border-gray-700 shadow-sm hover:scale-105 transition-transform duration-200'>
+                  <span ref={otherref} className={`inline-flex items-center ${visibleElements.otherref ? 'animate-pill1-slideInUp' : 'opacity-0'} gap-2 px-4 py-2 rounded-full bg-[rgb(28,27,31)] text-sm text-[#d1d1d1] border border-gray-700 shadow-sm hover:scale-105 transition-transform duration-200`}>
                     Python
                   </span>
-                  <span className='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgb(28,27,31)] text-sm text-[#d1d1d1] border border-gray-700 shadow-sm hover:scale-105 transition-transform duration-200'>
+                  <span ref={otherref} className={`inline-flex items-center ${visibleElements.otherref ? 'animate-pill2-slideInUp' : 'opacity-0'} gap-2 px-4 py-2 rounded-full bg-[rgb(28,27,31)] text-sm text-[#d1d1d1] border border-gray-700 shadow-sm hover:scale-105 transition-transform duration-200`}>
                     Numpy
                   </span>
-                  <span className='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgb(28,27,31)] text-sm text-[#d1d1d1] border border-gray-700 shadow-sm hover:scale-105 transition-transform duration-200'>
+                  <span ref={otherref} className={`inline-flex items-center ${visibleElements.otherref ? 'animate-pill3-slideInUp' : 'opacity-0'} gap-2 px-4 py-2 rounded-full bg-[rgb(28,27,31)] text-sm text-[#d1d1d1] border border-gray-700 shadow-sm hover:scale-105 transition-transform duration-200`}>
                     Pandas
                   </span>
-                  <span className='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgb(28,27,31)] text-sm text-[#d1d1d1] border border-gray-700 shadow-sm hover:scale-105 transition-transform duration-200'>
+                  <span ref={otherref} className={`inline-flex items-center ${visibleElements.otherref ? 'animate-pill4-slideInUp' : 'opacity-0'} gap-2 px-4 py-2 rounded-full bg-[rgb(28,27,31)] text-sm text-[#d1d1d1] border border-gray-700 shadow-sm hover:scale-105 transition-transform duration-200`}>
                     MatplotLib
                   </span>
-                  <span className='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgb(28,27,31)] text-sm text-[#d1d1d1] border border-gray-700 shadow-sm hover:scale-105 transition-transform duration-200'>
+                  <span ref={otherref} className={`inline-flex items-center ${visibleElements.otherref ? 'animate-pill5-slideInUp' : 'opacity-0'} gap-2 px-4 py-2 rounded-full bg-[rgb(28,27,31)] text-sm text-[#d1d1d1] border border-gray-700 shadow-sm hover:scale-105 transition-transform duration-200`}>
                     Autonomous Bots
                   </span>
                 </div>
