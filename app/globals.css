@@ -41,14 +41,77 @@ body {
 
 .animate-slideInUp {
   animation: slideInUp 0.8s ease-out forwards;
+  opacity: 1 !important;
 }
 
 
 @keyframes animate-pill {
-
-  from{
+  from {
     opacity: 0;
     transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-pill1-slideInUp {
+  animation: animate-pill 0.6s ease-out forwards 0.1s;
+  opacity: 1 !important;
+}
+.animate-pill2-slideInUp {
+  animation: animate-pill 0.6s ease-out forwards 0.2s;
+  opacity: 1 !important;
+}
+.animate-pill3-slideInUp {
+  animation: animate-pill 0.6s ease-out forwards 0.3s;
+  opacity: 1 !important;
+}
+.animate-pill4-slideInUp {
+  animation: animate-pill 0.6s ease-out forwards 0.4s;
+  opacity: 1 !important;
+}
+.animate-pill5-slideInUp {
+  animation: animate-pill 0.6s ease-out forwards 0.5s;
+  opacity: 1 !important;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.8s ease-out forwards;
+}
+
+@keyframes projectCardSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-project-card-slideInUp {
+  animation: projectCardSlideIn 0.8s ease-out forwards;
+  opacity: 1 !important;
+}
+
+@keyframes experienceItem {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
   }
   to {
     opacity: 1;
@@ -56,18 +119,35 @@ body {
   }
 }
 
-.animate-pill1-slideInUp {
- animation: animate-pill 0.8s ease-in-out forwards 0.1s normal;
+.animate-experience-item {
+  animation: experienceItem 0.7s ease-out forwards;
+  opacity: 1 !important;
 }
-.animate-pill2-slideInUp {
- animation: animate-pill 0.8s ease-in-out forwards 0.2s  normal;
+
+.animate-experience-item-delay-1 {
+  animation: experienceItem 0.7s ease-out forwards 0.1s;
+  opacity: 1 !important;
 }
-.animate-pill3-slideInUp {
- animation: animate-pill 0.8s ease-in-out forwards 0.3s  normal;
+
+.animate-experience-item-delay-2 {
+  animation: experienceItem 0.7s ease-out forwards 0.2s;
+  opacity: 1 !important;
 }
-.animate-pill4-slideInUp {
- animation: animate-pill 0.8s ease-in-out forwards 0.4s  normal;
+
+.animate-experience-item-delay-3 {
+  animation: experienceItem 0.7s ease-out forwards 0.3s;
+  opacity: 1 !important;
 }
-.animate-pill5-slideInUp {
- animation: animate-pill 0.8s ease-in-out forwards 0.5s  normal;
+
+.line {
+  width: 2px;
+  background: linear-gradient(to bottom, #3b82f6, #8b5cf6, #ec4899);
+  margin-right: 1rem;
+  min-height: 100%;
+}
+
+@media (max-width: 768px) {
+  .line {
+    margin-right: 0.75rem;
+  }
 }
