@@ -63,9 +63,9 @@ header {
   transition:all 0.2s ease; display:inline-flex; align-items:center; gap:8px;
 }
 
-.btn-primary{ background:var(--amber); color:var(--ink); }
-.btn-primary:hover{ background:#ffb84d; transform:translateY(-1px); }
-.btn-ghost{ border:1px solid var(--line); color:var(--text); }
+.btn-primary{ background:var(--amber); color:var(--ink); cursor:pointer; }
+.btn-primary:hover{ background:#ffb84d; transform:translateY(-1px); cursor:pointer; }
+.btn-ghost{ border:1px solid var(--line); color:var(--text); cursor:pointer; }
 .btn-ghost:hover{ border-color:var(--cyan); color:var(--cyan); }
 
 .wrap {
