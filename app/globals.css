@@ -58,6 +58,8 @@ header {
   border-bottom: 1px solid var(--line);
 }
 
+section{ padding:88px 0; border-top:1px solid var(--line); }
+
 .btn{
   padding:13px 24px; border-radius:6px; font-weight:600; font-size:0.95rem;
   transition:all 0.2s ease; display:inline-flex; align-items:center; gap:8px;
