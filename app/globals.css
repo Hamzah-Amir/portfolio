@@ -58,17 +58,15 @@ header {
   border-bottom: 1px solid var(--line);
 }
 
-.btn {
-  background-color: var(--amber);
-  color: var(--ink);
-  font-size: 16px;
-  padding: 8px 16px;
-  border-radius: var(--radius);
-  text-decoration: none;
-  font-weight: 400;
-  transition: background-color 0.3s ease;
-  cursor: pointer;
+.btn{
+  padding:13px 24px; border-radius:6px; font-weight:600; font-size:0.95rem;
+  transition:all 0.2s ease; display:inline-flex; align-items:center; gap:8px;
 }
+
+.btn-primary{ background:var(--amber); color:var(--ink); }
+.btn-primary:hover{ background:#ffb84d; transform:translateY(-1px); }
+.btn-ghost{ border:1px solid var(--line); color:var(--text); }
+.btn-ghost:hover{ border-color:var(--cyan); color:var(--cyan); }
 
 .wrap {
   max-width: var(--maxw);

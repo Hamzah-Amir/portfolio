@@ -8,7 +8,7 @@ const Navbar = () => {
         <Link href="#top" className={`${styles.logo}`} aria-label="hamza.dev">
           <span className={`${styles.dot}`} aria-hidden="true"></span>
           <span>hamza</span>
-          <span style={{ color:'var(--muted)', "font-weight": "400"}} className={``}>
+          <span style={{ color:'var(--muted)', "fontWweight": "400"}} className={``}>
             .dev
           </span>
           <button className={`${styles.navToggle}`} id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
@@ -19,7 +19,7 @@ const Navbar = () => {
           <Link href="#word">Work</Link>
           <Link href="#word">stack</Link>
           <Link href="#word">Process</Link>
-          <button className='btn'><Link href="#contact">Get in touch</Link></button>
+          <button className='btn btn-primary'><Link href="#contact">Get in touch</Link></button>
         </div>
     </nav>
   )
