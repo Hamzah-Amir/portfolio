@@ -3,7 +3,7 @@ import styles from './Stack.module.css'
 
 const Stack = () => {
   return (
-    <section>
+    <section id='stack'>
         <div className="wrap">
             <div className={styles['section-head']}>
                 <div>
