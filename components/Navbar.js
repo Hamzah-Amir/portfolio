@@ -16,9 +16,8 @@ const Navbar = () => {
           </button>
         </Link>
         <div className={`${styles.navLinks}`} id="nav-links">
-          <Link href="#word">Work</Link>
-          <Link href="#word">stack</Link>
-          <Link href="#word">Process</Link>
+          <Link href="#work">Work</Link>
+          <Link href="#stack">stack</Link>
           <button className='btn btn-primary'><Link href="#contact">Get in touch</Link></button>
         </div>
     </nav>
