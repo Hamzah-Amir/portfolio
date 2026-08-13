@@ -33,3 +33,68 @@
     font-size:0.95rem;
 }
 
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+@media (max-width: 800px) {
+    .work-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.work-card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 20px;
+    gap: 14px;
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.25s ease, transform 0.25s ease; 
+}
+
+.work-card .kicker {
+    color: var(--amber)
+}
+
+.work-card h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.work-card p {
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.work-card:hover {
+    border-color: var(--cyan);
+    transform: translateY(-4px);
+}
+
+.tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto;
+    padding-top: 8px;
+}
+
+.tag{
+  font-family:'IBM Plex Mono', monospace; font-size:0.72rem; color:var(--cyan);
+  border:1px solid var(--line); padding:4px 9px; border-radius:5px;
+}
+
+.featured {
+    grid-column: 1/-1; 
+}
+@media (max-width:800px) {
+    .featured {
+        grid-column: auto; 
+    } 
+}
