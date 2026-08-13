@@ -1,0 +1,58 @@
+.section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 48px; gap: 24px; flex-wrap: wrap;
+}
+
+.section-num{
+  font-family:'IBM Plex Mono', monospace; color:var(--cyan); font-size:0.8rem;
+  letter-spacing:0.06em; text-transform:uppercase; margin-bottom:10px; display:block;
+}
+
+.section-head h2 {
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+}
+
+.section-head .desc {
+    color: var(--muted);
+    max-width:38ch; 
+    font-size:0.95rem;
+}
+
+.stack-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+@media (max-width:800px) { .stack-grid{ grid-template-columns:repeat(2,1fr); } }
+
+.stack-grid .stack-cell {
+    background: var(--panel);
+    padding: 26px 22px; 
+}
+
+.stack-cell h4{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.78rem; 
+  color:var(--muted);
+  text-transform:uppercase; 
+  letter-spacing:0.06em; 
+  margin-bottom:14px;
+}
+
+.stack-cell ul{
+  list-style:none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.stack-cell ul li {
+    font-size: 0.95rem;
+}

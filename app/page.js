@@ -2,6 +2,7 @@ import Image from "next/image";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Work from "../components/Work";
+import Stack from "@/components/Stack";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
    <main id="top">
       <Hero />
       <Work />
+      <Stack />
    </main>
    </>
   );
