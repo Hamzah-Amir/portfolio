@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Work from "../components/Work";
 import Stack from "@/components/Stack";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Hero />
       <Work />
       <Stack />
+      <Contact />
    </main>
    </>
   );
