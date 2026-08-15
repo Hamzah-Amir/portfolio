@@ -98,3 +98,26 @@
         grid-column: auto; 
     } 
 }
+
+.link-capsule {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--ink);
+    background: var(--amber);
+    border: 1px solid var(--amber);
+    padding: 6px 14px;
+    border-radius: 999px;
+    transition: background 0.25s ease, color 0.25s ease;
+}
+
+.link-capsule:hover {
+    background: transparent;
+    color: var(--amber);
+}

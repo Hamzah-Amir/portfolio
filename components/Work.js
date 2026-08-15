@@ -8,14 +8,18 @@ const Work = () => {
             title: 'Inbox Pilot',
             description: 'A full-stack cold email outreach platform — lead scraping, AI-generated sequences, and send scheduling, with subscription billing built in from day one.',
             kicker: 'SaaS cold email outreach',
-            tags: ['Next.js', 'Prisma', 'Mysql', 'Google GenAI']
+            tags: ['Next.js', 'Prisma', 'Mysql', 'Google GenAI'],
+            liveUrl: "https://www.inboxpilot.pro",
+            repoUrl: "https://github.com/Hamzah-Amir/inbox_pilot"
         },
         {
             id: 2,
             title: 'Cartify',
             description: 'full stack buyer and seller based e-commerce website',
             kicker: 'E-commerce website',
-            tags: ["Django", "Postgresql"]
+            tags: ["Django", "Postgresql"],
+            liveUrl: "https://cartify-1h1k.onrender.com/",
+            repoUrl: "https://github.com/Hamzah-Amir/Cartify",
         },
     ];
 
@@ -41,6 +45,14 @@ const Work = () => {
                                     <span key={tag} className={styles.tag}>{tag}</span>
                                 ))}
                             </div>
+                            <a
+                                href={project.liveUrl}
+                                className={styles['link-capsule']}
+                                target='_blank'
+                                rel='noopener noreferrer'
+                            >
+                                Visit site
+                            </a>
                         </div>
                     ))}
                 </div>
