@@ -6,7 +6,7 @@ const Contact = () => {
     <>
     <section id="contact" className={styles["contact"]}>
         <div className="wrap">
-        <div className={`${styles['contact-inner']} ${styles['reveal']}`}>
+        <div className={`${styles['contact-inner']} reveal`}>
             <div>
             <h2>Have a system that needs building?</h2>
             <p className={styles["sub"]}>Freelance and contract work — web platforms, SaaS products, and automation. Based in Karachi, working async-friendly with clients anywhere.</p>
