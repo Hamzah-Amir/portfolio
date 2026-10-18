@@ -2,13 +2,14 @@
 
 .hero {
     position: relative;
-    padding: 96px 0 64px;
+    padding: 72px 0 64px;
+    border-top: none;
 }
 
 .eyebrow {
     display: flex;
     align-items: center;
-    font-family: "IBN Plex Mono" monospace;
+    font-family: "IBM Plex Mono", monospace;
     color: var(--cyan); font-size: 0.87rem;
     letter-spacing: 0.05em; text-transform: uppercase;
     gap: 10px; margin-bottom: 22px;
@@ -79,7 +80,14 @@
     animation: pulse-dot 1.6s ease-in-out infinite;
 }
 
-svg.pipeline{ width:100%; height:auto; display:block; }
+.pipeline{ width:100%; height:auto; display:block; }
+.pipeline-vertical{ display:none; width:100%; max-width:320px; height:auto; margin:0 auto; }
+
+@media (max-width:640px){
+  .pipeline{ display:none; }
+  .pipeline-vertical{ display:block; }
+  .pipeline-label{ flex-wrap:wrap; gap:8px; font-size:0.75rem; }
+}
 .node-box{ fill:var(--panel-2); stroke:var(--line); stroke-width:1; }
 .node-label{ font-family:'IBM Plex Mono', monospace; font-size:11px; fill:var(--text); }
 .node-sub{ font-family:'IBM Plex Mono', monospace; font-size:9px; fill:var(--muted); }
