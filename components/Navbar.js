@@ -29,6 +29,7 @@ const Navbar = () => {
         </button>
         <div className={`${styles.navLinks} ${open ? styles.open : ''}`} id="nav-links">
           <Link href="#work" onClick={closeMenu}>Work</Link>
+          <Link href="#about" onClick={closeMenu}>About</Link>
           <Link href="#stack" onClick={closeMenu}>Stack</Link>
           <Link href="#contact" className='btn btn-primary' onClick={closeMenu}>Get in touch</Link>
         </div>

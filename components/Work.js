@@ -18,7 +18,7 @@ const Work = () => {
         {
             id: 2,
             title: 'Cartify',
-            description: 'full stack buyer and seller based e-commerce website',
+            description: 'A multi-vendor marketplace where sellers list and manage their products, and buyers browse, add to cart, and check out — built end to end with Django and PostgreSQL.',
             kicker: 'E-commerce website',
             tags: ["Django", "Postgresql"],
             image: null,
