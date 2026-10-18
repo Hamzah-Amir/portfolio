@@ -5,14 +5,14 @@ const Stack = () => {
   return (
     <section id='stack'>
         <div className="wrap">
-            <div className={styles['section-head']}>
+            <div className="section-head reveal">
                 <div>
-                    <span className={styles['section-num']}>Tool Box</span>
+                    <span className="section-num">Tool Box</span>
                     <h2>What I build with</h2>
                 </div>
-                <p className={styles.desc}>A mix of full products built solo and automation systems that replaced hours of manual work.</p>
+                <p className="desc">A mix of full products built solo and automation systems that replaced hours of manual work.</p>
             </div>
-           <div className={styles['stack-grid']}>
+           <div className={`${styles['stack-grid']} reveal`}>
             <div className={styles['stack-cell']}>
                 <h4>Frontend</h4>
                 <ul>

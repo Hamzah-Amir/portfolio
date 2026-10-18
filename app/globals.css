@@ -1,8 +1,6 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
   --ink:#0B0F14;
   --panel:#121820;
   --panel-2:#161D26;
@@ -16,17 +14,8 @@
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-plex-mono);
 }
 
 html { scroll-behavior: smooth; }
@@ -43,10 +32,42 @@ html { scroll-behavior: smooth; }
 body {
   background: var(--ink);
   color: var(--text);
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-inter), sans-serif;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-space-grotesk), sans-serif;
+  letter-spacing: -0.02em;
+}
+
+:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Shared section header (Work, Stack) */
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 48px; gap: 24px; flex-wrap: wrap;
+}
+
+.section-head h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); }
+
+.section-num {
+  font-family: var(--font-plex-mono), monospace; color: var(--cyan); font-size: 0.8rem;
+  letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 10px; display: block;
+}
+
+.section-head .desc {
+  color: var(--muted);
+  max-width: 38ch;
+  font-size: 0.95rem;
 }
 
 header {

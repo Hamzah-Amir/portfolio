@@ -27,12 +27,12 @@ const Work = () => {
     <>
         <section id='work'>
             <div className="wrap">
-                <div className={`${styles["section-head"]} reveal`}>
+                <div className="section-head reveal">
                     <div>
-                        <span className={`${styles["section-num"]}`}>Selected Work</span>
+                        <span className="section-num">Selected Work</span>
                         <h2>Platform and Bots I have shipped</h2>
                     </div>
-                    <p className={styles.desc}>A mix of full products built solo and automation systems that replaced hours of manual work.</p>
+                    <p className="desc">A mix of full products built solo and automation systems that replaced hours of manual work.</p>
                 </div>
                 <div className={`${styles['work-grid']}`}>
                     {projects.map((project) => (

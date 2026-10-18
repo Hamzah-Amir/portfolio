@@ -1,25 +1,3 @@
-.section-head {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-bottom: 48px; gap: 24px; flex-wrap: wrap;
-}
-
-.section-num{
-  font-family:'IBM Plex Mono', monospace; color:var(--cyan); font-size:0.8rem;
-  letter-spacing:0.06em; text-transform:uppercase; margin-bottom:10px; display:block;
-}
-
-.section-head h2 {
-    font-size: clamp(1.5rem, 3vw, 2.2rem);
-}
-
-.section-head .desc {
-    color: var(--muted);
-    max-width:38ch; 
-    font-size:0.95rem;
-}
-
 .stack-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -38,7 +16,7 @@
 }
 
 .stack-cell h4{
-  font-family:'IBM Plex Mono', monospace;
+  font-family: var(--font-plex-mono), monospace;
   font-size:0.78rem; 
   color:var(--muted);
   text-transform:uppercase; 

@@ -4,14 +4,7 @@ import { useEffect } from 'react'
 
 const ScrollReveal = () => {
   useEffect(() => {
-    const targets = document.querySelectorAll('.reveal:not(.in)')
-    if (!targets.length) return
-
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    if (prefersReducedMotion) {
-      targets.forEach((el) => el.classList.add('in'))
-      return
-    }
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -22,9 +15,23 @@ const ScrollReveal = () => {
       })
     }, { threshold: 0.15 })
 
-    targets.forEach((el) => observer.observe(el))
+    const scan = () => {
+      document.querySelectorAll('.reveal:not(.in)').forEach((el) => {
+        if (prefersReducedMotion) el.classList.add('in')
+        else observer.observe(el)
+      })
+    }
 
-    return () => observer.disconnect()
+    scan()
+
+    // Pick up .reveal elements added or replaced after mount (client navigation, hot reload)
+    const mutations = new MutationObserver(scan)
+    mutations.observe(document.body, { childList: true, subtree: true })
+
+    return () => {
+      observer.disconnect()
+      mutations.disconnect()
+    }
   }, [])
 
   return null

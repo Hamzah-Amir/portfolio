@@ -10,7 +10,7 @@ const Footer = () => {
                     <p>&copy; 2026 Hamza Amir - Developer</p>
                 </div>
                 <div>
-                    <p>Karachi, PK . Available for work</p>
+                    <p>Karachi, PK · Available for work</p>
                 </div>
             </div>
         </div>
